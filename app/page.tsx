@@ -3,6 +3,7 @@ import Navbar from "./components/UI/Navbar";
 import { Button } from "@/components/ui/button";
 import ExpandableCardDemo from "@/components/blocks/expandable-card-demo-grid";
 import VideoHeader from "@/components/VideoHeader";
+import { TextRevealCard } from "@/components/ui/text-reveal-card";
 
 export default function Home() {
   return (
@@ -15,8 +16,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-5 px-5">
           <div className="text-white font-roboto font-extrabold text-7xl w-full">
-            KIKI KO KARIS RUTH JUMAWAN <br></br>
-            <span className="text-6xl">DON&apos;T JUST LIVE, EXIST!</span>
+            
+            KARIS RUTH JUMAWAN<br></br>
+            <TextRevealCard
+              text="She Goes Tech"
+              revealText="Software Developer"
+            ></TextRevealCard>
           </div>
           <button className="text-sm font-semibold px-6 py-3 border text-black bg-white border-white hover:bg-transparent hover:text-white rounded-full h-fit w-fit text-nowrap uppercase">
             Click Me

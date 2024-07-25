@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { FormEvent, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import VideoHeader from "@/components/VideoHeader";
 
 const NavbarItems = [
   {
@@ -36,29 +37,36 @@ const Navbar = () => {
   const [kiki, setKiki] = useState("");
   const handleSwitch = () => {
     setIsOn(!isOn);
+    setCookie("Switch", isOn);
   };
 
   useEffect(() => {
     if (isOn) {
-      setKiki("bati");
+      PlayMyVideo();
+      setKiki("video");
     } else {
-      setKiki("maot");
+      setKiki("text");
     }
   }, [isOn]);
 
+  useEffect(() => {
+    if (cookies.Switch) {
+      setIsOn(cookies.Switch);
+    }
+  }, [cookies.Switch]);
   console.log(kiki);
+
   return (
     <div className="w-full  flex items-start text-white  justify-between p-4 ">
       <div className="w-[120px]">
         <Switch onCheckedChange={() => handleSwitch()} checked={isOn}></Switch>
       </div>
 
-
       <div className="font-roboto text-xl font-bold space-x-3">
-        KIKI EUDOKIA
+        GET TO KNOW ME
       </div>
       <Button className="w-[120px]" variant={"default-white"}>
-        ABOUT ME
+        RESUME
       </Button>
     </div>
   );

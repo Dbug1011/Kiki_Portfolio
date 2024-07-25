@@ -10,7 +10,7 @@ const VideoHeader = () => {
         muted
         width="320"
         height="240"
-        src="/video/kikivid.mp4"
+        src="/video/Kiki_Vidfolio.mp4"
       ></video>
     </div>
   );
