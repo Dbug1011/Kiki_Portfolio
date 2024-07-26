@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
+import { useCookies } from "react-cookie";
 import React, { FormEvent, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import VideoHeader from "@/components/VideoHeader";
+import HomeProps from "@/app/page";
 
 const NavbarItems = [
   {
@@ -33,41 +34,38 @@ const NavbarItems = [
 ];
 
 const Navbar = () => {
+  const [cookies, setCookie] = useCookies(["Switch"]);
   const [isOn, setIsOn] = useState(false);
   const [kiki, setKiki] = useState("");
+
+  // useEffect(() => {
+  //   if (cookies.Switch !== undefined) {
+  //     setIsOn(cookies.Switch === "true");
+  //   }
+  // }, [cookies.Switch]);
+
   const handleSwitch = () => {
-    setIsOn(!isOn);
-    setCookie("Switch", isOn);
+    const newIsOn = !isOn;
+    setIsOn(newIsOn);
+    setCookie("Switch", newIsOn, {
+      path: "/",
+      maxAge: 25920000,
+    });
   };
-
-  useEffect(() => {
-    if (isOn) {
-      PlayMyVideo();
-      setKiki("video");
-    } else {
-      setKiki("text");
-    }
-  }, [isOn]);
-
-  useEffect(() => {
-    if (cookies.Switch) {
-      setIsOn(cookies.Switch);
-    }
-  }, [cookies.Switch]);
-  console.log(kiki);
-
+  console.log(cookies.Switch);
   return (
-    <div className="w-full  flex items-start text-white  justify-between p-4 ">
+    <div className="w-full flex items-start text-white justify-between p-4 z-[999]">
       <div className="w-[120px]">
-        <Switch onCheckedChange={() => handleSwitch()} checked={isOn}></Switch>
+        <Switch onCheckedChange={handleSwitch} checked={isOn}></Switch>
       </div>
-
       <div className="font-roboto text-xl font-bold space-x-3">
         GET TO KNOW ME
       </div>
-      <Button className="w-[120px]" variant={"default-white"}>
-        RESUME
-      </Button>
+      <a href="/Karis-Ruth-Jumawan-FlowCV-Resume.pdf">
+        <Button className="w-[120px]" variant={"default-white"}>
+          RESUME
+        </Button>
+      </a>
     </div>
   );
 };

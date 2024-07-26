@@ -2,14 +2,12 @@ import React from "react";
 
 const VideoHeader = () => {
   return (
-    <div>
+    <div className="absolute w-full h-full top-0 left-0 z-0 overflow-clip items-center">
       <video
         autoPlay
         loop
         playsInline
         muted
-        width="320"
-        height="240"
         src="/video/Kiki_Vidfolio.mp4"
       ></video>
     </div>
