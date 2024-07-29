@@ -56,7 +56,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className='w-full flex items-start text-white justify-between p-4 z-[999]'>
+		<div className='w-full flex md:flex-row flex-col items-start text-white justify-between p-4 z-[999] gap-2'>
 			<div className='w-[120px]'>
 				<Switch
 					onCheckedChange={handleSwitch}

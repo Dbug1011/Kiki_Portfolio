@@ -6,15 +6,24 @@ import { useSwitchContext } from '../context/switch-context';
 import Navbar from '../components/UI/Navbar';
 
 const LandingPage = () => {
-	const { isOn, setIsOn } = useSwitchContext();
+	const { setIsOn, isOn } = useSwitchContext();
 	return (
-		<div className='w-full flex flex-col h-full bg-black p-5 rounded-md item-start justify-between relative'>
+		<div className='w-full flex flex-col h-full bg-black md:p-5 p-2 rounded-md item-start justify-between relative'>
 			<Navbar />
 			{isOn ? (
-				<VideoHeader />
+				<>
+					<div className='w-full h-full md:block hidden'>
+						<VideoHeader />
+						{/* landscape ratio */}
+					</div>
+					<div className='w-full h-full md:hidden block'>
+						<VideoHeader />
+						{/* portrait ratio */}
+					</div>
+				</>
 			) : (
 				<div className='flex flex-col w-full h-fit gap-5 px-5 justify-between'>
-					<div className='text-white font-roboto font-extrabold text-7xl w-full'>
+					<div className='text-white font-roboto font-extrabold md:text-7xl text-4xl w-full'>
 						KARIS RUTH JUMAWAN
 						<br />
 						<TextRevealCard
