@@ -8,7 +8,7 @@ const VideoHeader = () => {
         loop
         playsInline
         muted
-        src="/video/Kiki_Vidfolio.mp4"
+        src="/video/Kiki_PortfolioFinal.mp4"
       ></video>
     </div>
   );
