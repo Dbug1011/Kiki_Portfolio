@@ -73,8 +73,8 @@ export default function ExpandableCardDemo() {
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={800}
+                  height={800}
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -139,8 +139,8 @@ export default function ExpandableCardDemo() {
             <div className="flex gap-4 flex-col  w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
-                  width={100}
-                  height={100}
+                  width={800}
+                  height={800}
                   src={card.src}
                   alt={card.title}
                   className="h-60 w-full  rounded-lg object-cover object-top"
@@ -205,10 +205,9 @@ const cards = [
   {
     description: "Videography | Video Editing",
     title: "She records",
-    src: "/public/photos/VideographyCover.png",
+    src: "/photos/VideographyCover.png",
     ctaText: "Visit",
-    ctaLink:
-      "https://www.canva.com/design/DAGKFT9xkNE/_NPK_c4pJ7ExwV-YxHTudQ/edit?utm_content=DAGKFT9xkNE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    ctaLink: "/video/Kiki_Videography.mp4",
     content: () => {
       return (
         <p>
@@ -222,9 +221,9 @@ const cards = [
   {
     description: "Photography",
     title: "She captures",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    src: "/photos/PhotographyCover.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/pdf/Jumawan-Photography-Portfolio.pdf",
     content: () => {
       return (
         <p>
@@ -234,13 +233,35 @@ const cards = [
       );
     },
   },
-
+  {
+    description: "Compilation of Certificates",
+    title: "She excels",
+    src: "/photos/CertificatesCover.png",
+    ctaText: "Visit",
+    ctaLink: "/pdf/Jumawan_Certificates.docx",
+    content: () => {
+      return (
+        <p>
+          <p>
+            Throughout my journey, I have earned several certificates that
+            highlight my dedication to continuous learning and professional
+            development. These certificates reflect my hard work, commitment,
+            and expertise in various fields. Each one represents a milestone in
+            my career, showcasing my proficiency and the knowledge I have gained
+            along the way. By continually seeking out new challenges and
+            educational opportunities, I strive to excel and grow in all my
+            endeavors.
+          </p>
+        </p>
+      );
+    },
+  },
   {
     description: "Atteventify",
     title: "She develops",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    src: "/photos/AtteventifyCover.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/pdf/Atteventify (1).pptx",
     content: () => {
       return (
         <p>
@@ -256,9 +277,9 @@ const cards = [
   {
     description: "Volunteerism",
     title: "She volunteers",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    src: "/photos/VolunteerismCover.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "/pdf/Kiki's Volunteerism.pptx",
     content: () => {
       return (
         <p>
