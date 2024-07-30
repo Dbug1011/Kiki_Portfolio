@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="font-roboto text-xl font-bold space-x-3">
         GET TO KNOW ME
       </div>
-      <a href="/Karis-Ruth-Jumawan-FlowCV-Resume.pdf">
+      <a href="/pdf/Karis-Ruth-Jumawan-FlowCV-Resume.pdf">
         <Button className="w-[100px]" font-roboto variant={"default-white"}>
           Resume
         </Button>

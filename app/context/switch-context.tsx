@@ -20,8 +20,13 @@ export const SwitchProvider = ({ children }: { children: ReactNode }) => {
 			setIsOn,
 			isOn,
 		}),
-		[isOn]
+		[isOn] //dependencies
 	);
+
+	// const contextValue = {
+	// 	isOn,
+	// 	setIsOn,
+	// };
 
 	return <SwitchContext.Provider value={contextValue}>{children}</SwitchContext.Provider>;
 };
