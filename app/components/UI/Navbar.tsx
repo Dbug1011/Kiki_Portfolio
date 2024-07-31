@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { useSwitchContext } from '@/app/context/switch-context';
 import { IoIosArrowDown } from 'react-icons/io';
+import Link from 'next/link';
 
 const NavbarItems = [
 	{
@@ -49,11 +50,11 @@ const Navbar = () => {
 				</span>
 			</div>
 			<div className='font-roboto text-xl font-bold space-x-3'>GET TO KNOW ME</div>
-			<a href='/pdf/Karis-Ruth-Jumawan-FlowCV-Resume.pdf'>
-				<Button className='w-[200px]' font-roboto variant={'default-white'}>
-					Resume
+			<div className='flex justify-end w-[200px]'>
+				<Button asChild className='w-[100px]' font-roboto variant={'default-white'}>
+					<Link href='/pdf/Karis-Ruth-Jumawan-FlowCV-Resume.pdf'>Resume</Link>
 				</Button>
-			</a>
+			</div>
 		</div>
 	);
 };
