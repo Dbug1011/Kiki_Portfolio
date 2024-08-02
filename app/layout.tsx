@@ -16,6 +16,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Karis Ruth Jumawan",
   description: "She Goes Tech",
+  icons: {icon: '/assets/logo.svg'}
 };
 
 export default function RootLayout({
@@ -25,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+  
       <body className={`${inter.className} ${roboto.className}`}>
         <SwitchProvider>{children}</SwitchProvider>
       </body>
