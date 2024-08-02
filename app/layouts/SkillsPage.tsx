@@ -24,6 +24,7 @@ const SkillsPageLayout = () => {
 			<div className='flex flex-wrap w-full h-full gap-5 py-10 justify-around overflow-scroll [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]'>
 				<ExpandableCardDemo />
 			</div>
+
 		</div>
 	);
 };

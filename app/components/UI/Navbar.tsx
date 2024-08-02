@@ -45,7 +45,7 @@ const Navbar = () => {
 		<div className='w-full flex items-start text-white justify-between p-4 z-[999]'>
 			<div className='w-[200px] flex items-center gap-2'>
 				<Switch onCheckedChange={handleSwitch} checked={isOn}></Switch>
-				<span className='text-xl animate-pulse text-white flex gap-2 items-center justify-center'>
+				<span className='text-m animate-pulse text-white flex gap-2 items-center justify-center'>
 					<IoIosArrowDown className='rotate-90' /> Toggle Me!
 				</span>
 			</div>
