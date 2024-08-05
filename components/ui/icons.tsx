@@ -23,7 +23,7 @@ import { Button } from "./moving-border";
 
 const Icons = () => {
   return (
-    <div className="md:flex grid-col-2 md:items-start items-center  md:justify-around justify-center  text-white md:text-5xl  mx-auto w-full h-fit ">
+    <div className="flex flex-row flex-wrap md:items-start items-center  md:justify-around justify-center  text-white md:text-5xl  mx-auto w-full h-fit ">
       <Button
         className="w-7 h-7 "
         borderClassName="w-7 h-7 hover:scale-125  transition-transform "

@@ -43,19 +43,20 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex md:items-start items-center text-white justify-between p-4 z-[999]">
-      <div className="w-[200px] flex items-center gap-2">
+      <div className="md:w-[200px] w-fit flex items-start gap-2 md:flex-row flex-col">
         <Switch onCheckedChange={handleSwitch} checked={isOn}></Switch>
-        <span className="md:text-m text-sm animate-pulse text-white flex gap-2 items-center justify-center">
-          <IoIosArrowDown className="rotate-90" /> Toggle Me!
+
+        <span className="md:text-lg text-[0.500rem] animate-pulse text-nowrap text-white flex gap-2 items-center justify-center">
+          <IoIosArrowDown className="md:rotate-90 rotate-180 " /> Toggle Me!
         </span>
       </div>
-      <div className="font-roboto md:text-xl text-lg font-bold space-x-3 md:none text-center">
+      <div className="font-roboto md:text-xl text-[.900rem] font-bold space-x-3 text-nowrap ">
         GET TO KNOW ME
       </div>
-      <div className="flex justify-end w-[200px]">
+      <div className="flex justify-end md:w-[200px] w-fit">
         <Button
           asChild
-          className="md:w-[100px] w-[90px]"
+          className="md:w-[100px] w-[65px] text-[.800rem]"
           font-roboto
           variant={"default-white"}
         >
